@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function constructor
+        function Human1(name,money,healthRate,sleepMode){
+            this.name=name,
+            this.money=money,
+            this.healthRate=healthRate,
+            this.sleepMode=sleepMode
+        }
+        Human1.prototype.Sleep=function (hours){
+            if(hours==7){
+                this.sleepMode="happy";
+            }else if(hours>7){
+                this.sleepMode="lazy";
+            }else{
+                this.sleepMode="tired";
+            }
+            return this.sleepMode;
+        }
+        Human1.prototype.Eat=function (meals){
+            switch(meals){
+                case 3:
+                    this.healthRate=100;
+                    break;
+                case 2:
+                    this.healthRate=75;
+                    break;
+                case 1:
+                    this.healthRate=50;
+                    break;
+            }
+            return this.healthRate;
+        }
+        Human1.prototype.Buy=function (item){
+            this.money-=item*10;
+            return this.money;
+        }
+        let person1=new Human1("ahmed",7000,50,"tired");
+
+        console.log("function constructor");
+        console.log("before");
+
+        console.log(person1);
+        person1.Buy(5);
+        person1.Sleep(7);
+        person1.Eat(3);
+        console.log("after");
+
+        console.log(person1);
+
+
+        //class 
+        class Human2{
+            constructor(name,money,healthRate,sleepMode){
+                this.name=name;
+                this.money=money;
+                this.healthRate=healthRate;
+                this.sleepMode=sleepMode;
+
+            }
+            Buy(item){
+                this.money-=item*10;
+                return this.money;
+            }
+            Eat(meals){
+                switch(meals){
+                    case 3:
+                        this.healthRate=100;
+                        break;
+                    case 2:
+                        this.healthRate=75;
+                        break;
+                    case 1:
+                        this.healthRate=50;
+                        break;
+                }
+                return this.healthRate;
+            }
+            Sleep(hours){
+                if(hours==7){
+                    this.sleepMode="happy";
+                }else if(hours>7){
+                    this.sleepMode="lazy";
+                }else{
+                    this.sleepMode="tired";
+                }
+                return this.sleepMode;
+            }
+        }
+        let person2=new Human2("mahmoud",8000,80,"lazy");
+        console.log("class constructor");
+        console.log("before");
+
+        console.log(person2);
+        person2.Buy(10);
+        person2.Sleep(3);
+        person2.Eat(1);
+        console.log("after");
+        console.log(person2);
+        //oloo
+        let Human3={
+            init(name,money,healthRate,sleepMode){
+                this.name=name;
+                this.money=money;
+                this.healthRate=healthRate;
+                this.sleepMode=sleepMode;
+                return this;
+            },
+            Buy(item){
+                this.money-=item*10;
+                return this.money;
+            },
+            Eat(meals){
+                switch(meals){
+                    case 3:
+                        this.healthRate=100;
+                        break;
+                    case 2:
+                        this.healthRate=75;
+                        break;
+                    case 1:
+                        this.healthRate=50;
+                        break;
+                }
+                return this.healthRate;
+            },
+            Sleep(hours){
+                if(hours==7){
+                    this.sleepMode="happy";
+                }else if(hours>7){
+                    this.sleepMode="lazy";
+                }else{
+                    this.sleepMode="tired";
+                }
+                return this.sleepMode;
+            }
+        }
+        let person3=Object.create(Human3).init("mohamed",7000,50,"tired");
+        console.log("oloo");
+        console.log("before: ");
+        console.log(person3);
+        person3.Sleep(7);
+        person3.Buy(8);
+        person3.Eat(2);
+        console.log("after: ");
+        console.log(person3);
+
+        //function factory
+        let Human4=function (name,money,healthRate,sleepMode){
+            return{
+                name,
+                money,
+                healthRate,
+                sleepMode,
+                Buy(item){
+                    this.money-=item*10;
+                    return this.money;
+                },
+                Eat(meals){
+                    switch(meals){
+                        case 3:
+                            this.healthRate=100;
+                            break;
+                        case 2:
+                            this.healthRate=75;
+                            break;
+                        case 1:
+                            this.healthRate=50;
+                            break;
+                    }
+                    return this.healthRate;
+                },
+                Sleep(hours){
+                    if(hours==7){
+                        this.sleepMode="happy";
+                    }else if(hours>7){
+                        this.sleepMode="lazy";
+                    }else{
+                        this.sleepMode="tired";
+                    }
+                    return this.sleepMode;
+                }
+                
+            }
+        }
+        let person4=Human4("yossef",5000,75,"tired");
+        console.log("function factory");
+        console.log("before: ");
+        console.log(person4);
+        person4.Sleep(8);
+        person4.Buy(8);
+        person4.Eat(1);
+        console.log("after: ");
+        console.log(person4);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // forEach
+// it’s used to loop over data in the array and it returns void
+//using forEach to copy data from one array to another array
+const Array =[1, 2, 3, 4, 5, 6];
+const reversed=[];
+Array.forEach((s,i)=>reversed[i]=s);
+
+//using forEach to to print data
+Array.forEach((s)=>console.log(s));
+//you can do operation on the elements before printing them without ever changing
+//the existing array
+Array.forEach((s)=>console.log(s*2)); // printing elements multiplied by 2
+
+//map
+//map is somewhat like foEach except It returns a shallow copy of the array
+//using forEach to copy data from one array to another array
+const copy= Array.map((m)=>m); //copy the array without modifying
+console.log(copy);
+//using forEach to copy data from one array to another array and multiply the
+//elements by to
+const copyDouble= Array.map((m)=>m*2); //copy the array with modifying
+console.log(copyDouble);
+    </script>
+</body>
+</html>
