@@ -1,5 +1,5 @@
 # js-labs
-## lab01
+
 > <a href="https://mahmoud-elbasiony.github.io/js-labs/day1/Lab/index.html">lab 01</a>
 
 > <a href="https://mahmoud-elbasiony.github.io/js-labs/day2/Lab/index.html">lab 02</a>
