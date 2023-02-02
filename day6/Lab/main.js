@@ -7,25 +7,25 @@ class Shape {
         this.#sides=sides;
         this.#sideLength=sideLength;
     }
-    // set name(n){
-    //     this.#name=n;
-    // }
-    // set sides(n){
-    //     this.#sides=n;
-    // }
-    // set sideLength(n){
-    //     this.#sideLength=n;
-    // }
+    set name(n){
+        this.#name=n;
+    }
+    set sides(n){
+        this.#sides=n;
+    }
+    set sideLength(n){
+        this.#sideLength=n;
+    }
 
-    // get name(){
-    //     return this.#name;
-    // }
-    // get sides(){
-    //     return this.#sides;
-    // }
-    // get sideLength(){
-    //     return this.#sideLength;
-    // }
+    get name(){
+        return this.#name;
+    }
+    get sides(){
+        return this.#sides;
+    }
+    get sideLength(){
+        return this.#sideLength;
+    }
     
     calcPerimeter() {
         return this.sides*this.sideLength;
@@ -35,7 +35,6 @@ class Shape {
 class Sqaure extends Shape{
     constructor(sideLength){
         super("sqaure",4,sideLength)
-        
     }
     calcArea(){
         return this.sideLength*this.sideLength;
