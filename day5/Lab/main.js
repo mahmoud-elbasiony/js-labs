@@ -73,6 +73,9 @@ class Employee extends Person{
         this.salary=salary;
         this.isManager=isManager;
     }
+     count(){
+        console.log(this);
+    }
     get salary(){
         return this.#salary;
     }
