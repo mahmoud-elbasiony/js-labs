@@ -16,3 +16,5 @@
 > <a href="https://mahmoud-elbasiony.github.io/js-labs/day5/Lab/Lab05.html">lab 05</a>
 
 > <a href="https://mahmoud-elbasiony.github.io/js-labs/day6/Lab/index.html">lab 06</a>
+
+> <a href="https://mahmoud-elbasiony.github.io/js-labs/day7/Lab/index.html">lab 07</a>
