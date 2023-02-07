@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.invalid-tooltip{
+    display: block;
+    background-color: red;
+    color:white;
+}
+
+.valid-tooltip{
+    display: none;
+    
+}

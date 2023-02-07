@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding-top: 60px;
+
+}
+button{
+    margin-left: 10px;
+    background-color: red;
+    color: aliceblue;
+    min-width: 80px;
+    min-height: 40px;
+    border-radius: 20px;
+    border:none;
+    cursor: pointer;
+
+}
+.form,.tasks{
+    width: 700px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+input{
+    padding-left: 15px;
+    min-width: 500px;
+    min-height: 40px;
+    border-radius: 20px;
+    margin-right: 15px;
+
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task{
+    font-size: 18px;
+    padding-left: 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    text-decoration: line-through;
+}
+
+
+.checkbtn{
+    background-color: green;
+}
