@@ -18,3 +18,6 @@
 > <a href="https://mahmoud-elbasiony.github.io/js-labs/day6/Lab/index.html">lab 06</a>
 
 > <a href="https://mahmoud-elbasiony.github.io/js-labs/day7/lab/index.html">lab 07</a>
+
+> <a href="https://mahmoud-elbasiony.github.io/js-labs/day8/index.html">lab 08</a>
+
