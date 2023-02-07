@@ -4,9 +4,29 @@
     margin: 0;
 }
 body{
-    padding-top: 60px;
+    width: 100vw;
+    min-height: 100vh; 
+    padding: 60px;
+    
 
 }
+.container{
+    position: fixed;
+    margin: auto;
+    padding: 60px;
+    min-width: 150vw;
+    min-height: 100vh;
+    background-color: blueviolet;
+    left: 25%;
+    top: 25%;
+    transform: rotate(-30deg) translate(-25%,-25%);
+    /* border-top: 50vw solid rgb(148, 100, 5) ;
+    border-right: 50vw solid transparent ;
+    border-bottom:50vw solid transparent ;
+    border-left:50vw solid rgb(148, 100, 5); */
+    z-index: -1;
+}
+
 button{
     margin-left: 10px;
     background-color: red;
@@ -42,7 +62,8 @@ input{
 .task{
     font-size: 18px;
     padding-left: 15px;
-    border: 1px solid black;
+    border: 1px solid rgb(127, 126, 126);
+    box-shadow: 1px 1px 10px 0px  rgba(128, 128, 128, 0.468) ;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
