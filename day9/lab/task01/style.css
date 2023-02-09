@@ -46,6 +46,9 @@ img{
     border-radius: 15px;
     height: auto;
 }
+img::selection{
+    background: transparent;
+}
 .center img:hover{
     width: 80%;
     /* scale: 1.1; */
