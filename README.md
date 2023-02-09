@@ -23,6 +23,6 @@
 
 > lab09
 
-* <a href="https://mahmoud-elbasiony.github.io/js-labs/day9/Lab/task01.html">slider</a>
+* <a href="https://mahmoud-elbasiony.github.io/js-labs/day9/lab/task01/index.html">slider</a>
 
-* <a href="https://mahmoud-elbasiony.github.io/js-labs/day9/Lab/task02/watch.html">watch</a>
+* <a href="https://mahmoud-elbasiony.github.io/js-labs/day9/lab/task02/watch.html">watch</a>
