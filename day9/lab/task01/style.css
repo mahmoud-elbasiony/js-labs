@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    /* border: 1px solid black; */
+}
+
+body{
+    padding: 64px;
+
+}
+.container{
+    margin: auto;
+    /* width: 100%; */
+    /* background-color: black; */
+}
+
+.carasoul{
+    padding: 50px 0;
+    margin: 0 auto;
+    max-width: 80vw; 
+    min-width: 300px;
+    height: 50vh;
+    min-height: 500px;
+
+    display: flex;
+    flex-wrap:wrap;
+    gap: 100px;
+    /* flex-direction: column; */
+    /* position: relative; */
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: lightblue;
+    border-radius: 15px;
+}
+.slides{
+    /* width: 100%; */
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width: 60%;
+    border-radius: 15px;
+    height: auto;
+}
+.center img:hover{
+    width: 80%;
+    /* scale: 1.1; */
+    transition: .35s;
+    height: auto;
+}
+.slide{
+    display: flex;
+    /* width: 40%; */
+    /* scale: 1; */
+    font-size: 18px;
+    font-weight: bold;
+    /* background-color: blueviolet; */
+    /* transition: 5s; */
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.slide.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.3,1.3);
+    z-index: 1;
+}
+.slide.hidden{
+    display: none;
+}
+
+
+.carasoulbtn{
+    /* background-color: rebeccapurple; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.carasoulbtn div{
+    width:60px;
+    height: 7px;
+    background-color: gray;
+    border-radius: 4px;
+}
+
+.carasoulbtn .active{
+    background-color: black;
+    
+}
+.material-symbols-outlined{
+    display: flex;
+    font-size:3rem;
+    cursor: pointer;
+    padding-left: 10px;
+}
+.material-symbols-outlined::selection{
+    background: transparent;
+}
+.material-symbols-outlined:hover{
+    font-size:3rem;
+    cursor: pointer;
+    scale: 1.2;
+    transition: .15s;
+    
+    /* background-color: gray; */
+    /* padding: 2px; */
+}
+
+
+

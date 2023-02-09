@@ -1,0 +1,231 @@
+*{
+    border:1px solid rgba(100, 100, 100, .1);
+}
+body{
+    padding-top: 60px;
+}
+.watch-container{
+    
+    margin-top: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch{
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: rgb(94, 85, 85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 4px 3px black;
+}
+
+.inner-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 90%;
+    height: 90%;
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 4px 2px rgb(53, 51, 51) inset,
+    0px 0px 4px 2px rgb(34, 32, 32) ;
+    
+}
+.dots{
+    width: 96%;
+    height: 2px;
+    background-color: transparent;
+    position: absolute;
+}
+.dots::after,.dots::before{
+    content: "";
+    position: absolute;
+    width: 3%;
+    height: 2px;
+    background-color: black;
+}
+
+.dots::after{
+    left: 97%;
+}
+.i1{
+    transform: rotate(0deg);
+}
+.i2 {
+    transform: rotate(30deg);
+}
+.i3 {
+    transform: rotate(60deg);
+}
+.i4 {
+    transform: rotate(90deg);
+}
+.i5 {
+    transform: rotate(120deg);
+}
+.i6 {
+    transform: rotate(150deg);
+}
+.mid{
+    width: 5%;
+    height: 5%;
+    background-color: rgb(58, 41, 41);
+    box-shadow: 0 0 1px 1px rgb(34, 33, 33),
+    0 0 1px 1px rgb(34, 33, 33) inset;
+    border-radius: 50%;
+    position: relative;
+    z-index: 5;
+}
+.mid::before{
+    content: "";
+    left: 2.5px;
+    top: 2.5px;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+}
+
+.sec {
+    height: 42%;
+    position: absolute;
+    width: 5px;
+    background-color: rgb(201, 114, 15);
+    transform-origin: bottom;
+    border-radius: 500px;
+    translate: 0px -47.7%  ;
+    z-index:4 ;
+    /*animation: seconds 60s linear infinite;*/
+}
+
+.min {
+    position: absolute;
+    height: 35%;
+    width: 5px;
+    border-radius: 100px;
+    background-color: black;
+    transform-origin: bottom;
+    translate:0px -47.7% ;
+    z-index: 2;
+    /*animation: minutes 3600s linear infinite;*/
+}
+
+.hour {
+    z-index: 3;
+    position: absolute;
+    height: 25%;
+    width: 5px;
+    border-radius: 100px;
+    background-color: rgb(0, 0, 0);
+    transform-origin: bottom;
+    translate:0px -47.7% ;
+    /*animation: hours 43200s linear infinite;*/
+}
+
+@keyframes seconds{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes minutes {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes hours {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+div.click{
+    margin: auto;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    width: 400px;
+    height:80px;
+    border-radius: 500px;
+    background-color: rgb(63, 51, 51);
+    color: aqua;
+    
+}
+div.click p{
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 500px;
+    text-align: center;
+    background-color: bisque;
+    color: black;
+}
+div button{
+    font-family: sans-serif;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    
+
+}
+
+.click{
+    display: flex;
+    flex-direction: col;
+    justify-content: space-around;
+}
+
+.click >div,.alarm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap:5px;
+ 
+}
+.click > div input{
+    flex:1;
+    border-radius: 5px;
+    flex-grow: 1;
+    gap:5px;
+    width: 80px;
+    height: 30px;
+    background-color: brown;
+    padding: 5px;
+    text-align: center;
+}
+
+.alarm button{
+    width: 80px;
+    border-radius: 5px;
+    height: 30px;
+}
+.alarm button:last-child{
+    background-color: red;
+}
+.alarm button:first-child{
+    background-color: green;
+    
+}
+.alarm button:hover{
+    opacity: 50%;
+}

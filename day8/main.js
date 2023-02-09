@@ -56,7 +56,7 @@ function addToPage(array){
 
 
 function addBtEvent(btn){
-    btn.addEventListener("click",function(e){
+          btn.addEventListener("click",function(e){
         console.log(btn.className)
         let task=btn.closest(".task");
         if(btn.className=="checkbtn"){
