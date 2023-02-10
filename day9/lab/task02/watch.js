@@ -43,12 +43,17 @@ setBtn.addEventListener("click", function() {
     if(alarmtimer>0){
         clearTimeout(setTimeoutId);
         
-        setTimeout(function(){
+        setTimeoutId=setTimeout(function(){
             alert("Ringggggggggggggggggggggg")
         },alarmtimer)
     }
     
     
+    
+})
+
+clearBtn.addEventListener("click",function(){
+    clearTimeout(setTimeoutId);
 })
 
 

@@ -1,7 +1,7 @@
 const next=document.getElementById("next");
 const prev=document.getElementById("prev");
 var images=document.querySelectorAll(".slides div");
-var btns=document.querySelectorAll(".carasoulbtn div");
+// var btns=document.querySelectorAll(".carasoulbtn div");
 
 
 function slideNext(){
@@ -20,9 +20,12 @@ function slideNext(){
                 images[current].classList.remove("hidden");
                 console.log(current)
                 images[current==images.length-1?0:current+1].classList.remove("hidden");
-                images[images.length-1].insertAdjacentElement('afterend',images[0])
-                btns.forEach((btn)=>btn.classList.remove("active"))
-                btns[i].classList.add("active")
+
+                document.querySelector(".slides").appendChild(images[0])
+
+                // images[images.length-1].insertAdjacentElement('afterend',images[0])
+                // btns.forEach((btn)=>btn.classList.remove("active"))
+                // btns[i].classList.add("active")
                 return;
             
         }
@@ -44,7 +47,9 @@ function slideprev(){
                 images[current].classList.remove("hidden");
                 console.log(current)
                 images[current==0?images.length-1:current-1].classList.remove("hidden");
-                images[0].insertAdjacentElement('beforebegin',images[images.length-1])
+                document.querySelector(".slides").prepend(images[images.length-1])
+
+                // images[0].insertAdjacentElement('beforebegin',images[images.length-1])
 
                 return;
             

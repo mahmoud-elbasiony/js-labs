@@ -14,8 +14,8 @@ body{
 
 .watch{
     margin: auto;
-    width: 400px;
-    height: 400px;
+    width: 370px;
+    height: 370px;
     border-radius: 10px;
     background-color: rgb(94, 85, 85);
     display: flex;
@@ -160,7 +160,7 @@ div.click{
     align-items: center;
     text-align: center;
     margin-top: 10px;
-    width: 400px;
+    width: 370px;
     height:80px;
     border-radius: 500px;
     background-color: rgb(63, 51, 51);
