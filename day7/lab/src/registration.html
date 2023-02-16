@@ -16,10 +16,16 @@
             <div class="form-floating mb-3 col-10">
                 <input type="text" class="form-control" id="floatingInput" placeholder="Username" id="validationCustomUsername" autocomplete="off" required>
                 <label for="floatingInput" class="ms-1">User Name</label>
+                <div class="valid-tooltip" id="validUser">
+                    please enter user.
+                </div>
             </div>
             <div class="form-floating mb-3 col-10">
                 <input type="email" class="form-control" id="floatingInput"  placeholder="example@gmail.com" autocomplete="off" required>
                 <label for="floatingInput" class="ms-1">Email</label>
+                <div class="valid-tooltip" id="validEmail">
+                    please enter email.
+                </div>
             </div>
             <div class="form-floating mb-3 col-10">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
@@ -35,12 +41,12 @@
                     password doesn't match.
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary col-3 mb-1" id="submit" >signup</button>
-            <!-- <button type="submit" class="btn btn-primary col-3 mb-1" id="submit" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">signup</button> -->
+            <!-- <button type="submit" class="btn btn-primary col-3 mb-1" id="submit" >signup</button> -->
+            <button type="submit" class="btn btn-primary col-3 mb-1" id="submit" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">signup</button>
             <p class="text-light">already have an account<a href="../index.html" class="ms-1">login</a></p>
             <!-- modal -->
-            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -54,7 +60,7 @@
 
                     </div>
                 </div>
-            </div> -->
+            </div>
         </form>
     </div>
     <script src="js/registration.js"></script>
