@@ -4,8 +4,9 @@ const taskinput=document.getElementById("taskinput");
 
 let tasksArray=[];
 Object.keys(localStorage).sort().forEach(key=>{
-    let value=JSON.parse(localStorage.getItem(key))
     if(typeof key =='number'){
+    let value=JSON.parse(localStorage.getItem(key))
+
         const task={
             id:key,
             data:value["data"],
