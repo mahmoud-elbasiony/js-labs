@@ -7,9 +7,7 @@
 > lab03
 
 * <a href="https://mahmoud-elbasiony.github.io/js-labs/day3/Lab/part01.html">part01</a>
-
 * <a href="https://mahmoud-elbasiony.github.io/js-labs/day3/Lab/part02.html">part02</a>
-
 * <a href="https://mahmoud-elbasiony.github.io/js-labs/day3/Lab/part03.html">part03</a>
 
 > <a href="https://mahmoud-elbasiony.github.io/js-labs/day4/Lab/lab_oop.html">lab 04</a>
@@ -25,7 +23,6 @@
 > lab09
 
 * <a href="https://mahmoud-elbasiony.github.io/js-labs/day9/lab/task01/index.html">slider</a>
-
 * <a href="https://mahmoud-elbasiony.github.io/js-labs/day9/lab/task02/watch.html">watch</a>
 
 > lab10
