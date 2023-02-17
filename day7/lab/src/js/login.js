@@ -18,7 +18,7 @@ if(localStorage.getItem("username")==''){
 
 
 //add event listener for email 
-email.addEventListener('change', checkinputemail);
+email.addEventListener('input', checkinputemail);
 
 // function check input email data
 function checkinputemail(){
@@ -39,7 +39,7 @@ function checkinputemail(){
 
 
 //add event listener for email 
-password.addEventListener('change', checkinputpass);
+password.addEventListener('input', checkinputpass);
 
 //function check input email data
 function checkinputpass(){

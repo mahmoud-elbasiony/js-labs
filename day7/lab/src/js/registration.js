@@ -7,7 +7,7 @@ const submit = document.getElementById("submit");
 let message = document.querySelector(".modal-body");
 const userRegex=/[a-zA-Z]\S{5,20}/;
 const emailRegex=/[[a-zA-Z]{1}\w*\.*\w+]*@{1}\w*\.{1}\w*/;
-const passRegex=/\S{8,20}/;
+const passRegex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\S]{8,}$/g;
 
 document.getElementsByTagName("form").onsubmit=function(ev) {
     ev.preventDefault();
@@ -17,7 +17,7 @@ document.getElementsByTagName("form").onsubmit=function(ev) {
 
 
 // email.addEventListener("change",checkemail)
-email.addEventListener('change', checkinputemail);
+email.addEventListener('input', checkinputemail);
 // function check input email data
 function checkinputemail(){
     isInputValueEmpty(email,"validEmail")
@@ -25,20 +25,20 @@ function checkinputemail(){
         console.log("ASDASDasd")
         email.style.color="green" //change input colr based on email validation
         return true;
-
     }else{
         email.style.color="red" //change input colr based on email validation
-        return true;
+        return false;
 
 
     }
 }
-username.addEventListener("change",checkUser)
-password.addEventListener("change",checkpass)
-repeatpassword.addEventListener("change",checkpass)
+username.addEventListener("input",checkUser)
+
+password.addEventListener("input",checkpass)
+repeatpassword.addEventListener("input",checkpass)
 submit.addEventListener('click', validate);
 
-submit.setAttribute("disabled","")
+// submit.setAttribute("disabled","")
 
 
 function checkpass(){
@@ -51,7 +51,7 @@ function checkinput(input){
         document.getElementsByClassName(input)[0].classList.remove("valid-tooltip");
         document.getElementsByClassName(input)[1].classList.add("invalid-tooltip");
         document.getElementsByClassName(input)[1].classList.remove("valid-tooltip");
-        
+        // submit.setAttribute("disabled","")
         
     }else{
         // username.parentElement.style.outlineColor="green"
@@ -59,26 +59,36 @@ function checkinput(input){
         document.getElementsByClassName(input)[0].classList.remove("invalid-tooltip");
         document.getElementsByClassName(input)[1].classList.add("valid-tooltip");
         document.getElementsByClassName(input)[1].classList.remove("invalid-tooltip");
-        if(checkinputemail() && checkUser()){
-        submit.removeAttribute("disabled","")
+        // if (repeatpassword.value == password.value && checkinputemail()  && checkUser() && checkRegExp(password,passRegex)) {
+        //     console.log("enable ")
+        //     submit.removeAttribute("disabled")
 
-        }
+        // }
+        
     }
 }
-
+function checkAllInputs(){
+    if(repeatpassword.value == password.value && checkinputemail()  && checkUser() && checkRegExp(password,passRegex))
+    {
+        return true;
+    }
+    return false;
+}
 function validate(e) {
     e.preventDefault();
     if (username.value == "" || password.value == "" || email.value =="" || repeatpassword.value=="") {
         message.style.color = "red";
         message.innerText = "Please enter missing data";
+        // submit.setAttribute("disabled","")
     } else if (repeatpassword.value != password.value) {
         checkinput("validpass");
-    } else if (repeatpassword.value ==password.value && email !="" && username.value != "") {
+    } else if (checkAllInputs()) {
         message.style.color = "green";
-        message.innerText = "sighup successfuly";
+        message.innerText = "signup successfuly";
         addAccount(username.value,email.value,password.value);
         // document.getElementsByClassName("btn-close")[0].onclick=signup;
-        submit.removeAttribute("disabled","")
+
+        // submit.removeAttribute("disabled","")
         setTimeout(signup,1000)
     }
     
@@ -97,15 +107,16 @@ function signup(){
 
 function checkUser(){
     isInputValueEmpty(username,"validUser");
+    
     if(checkRegExp(username,userRegex)){
         console.log("ASDASDasd");
-        
-
         username.style.color="green"
+
         return true;
 
     }else{
         username.style.color="red"
+
         return false;
 
     }
@@ -123,6 +134,8 @@ function checkRegExp(input,regexp){
             check= true;
         }else{
             console.log("false")
+            // submit.setAttribute("disabled","")
+
             return false;
         }
     }
@@ -136,6 +149,8 @@ function isInputValueEmpty(input,message){
         // email.parentElement.style.outlineColor="red"
         document.getElementById(message).classList.add("invalid-tooltip")
         document.getElementById(message).classList.remove("valid-tooltip")
+        // submit.setAttribute("disabled","")
+
         return true;
     }else{
         // email.parentElement.style.outlineColor="green"
