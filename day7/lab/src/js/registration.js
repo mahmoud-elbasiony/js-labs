@@ -101,7 +101,12 @@ function addAccount(user,email,password){
 }
 
 function signup(){
-    location.assign(location.origin+"/index.html");
+    if(location.origin=='https://mahmoud-elbasiony.github.io'){
+        location.assign(location.origin+"/js-labs/day7/lab/index.html");
+    }else{
+        location.assign(location.origin+"/index.html");
+
+    }
 }
 
 
