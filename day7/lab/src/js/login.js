@@ -128,5 +128,6 @@ function checkRegExp(input,regexp){
 }
 
 function login(){
-    location.assign(location.origin+"/src/welcome.html");
+    
+    location.href="./src/welcome.html";
 }
