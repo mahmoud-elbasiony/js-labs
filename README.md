@@ -30,8 +30,8 @@
 
 > lab10
 
-> <a href="https://mahmoud-elbasiony.github.io/js-labs/day7/lab/index.html">login</a>
-> <a href="https://mahmoud-elbasiony.github.io/js-labs/day8/index.html">todo list</a>
-> <a href="https://mahmoud-elbasiony.github.io/js-labs/day10/lab/task/index.html">js Api</a>
+* <a href="https://mahmoud-elbasiony.github.io/js-labs/day7/lab/index.html">login</a>
+* <a href="https://mahmoud-elbasiony.github.io/js-labs/day8/index.html">todo list</a>
+* <a href="https://mahmoud-elbasiony.github.io/js-labs/day10/lab/task/index.html">js Api</a>
 
 
