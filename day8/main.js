@@ -5,12 +5,16 @@ const taskinput=document.getElementById("taskinput");
 let tasksArray=[];
 Object.keys(localStorage).sort().forEach(key=>{
     let value=JSON.parse(localStorage.getItem(key))
-    const task={
-        id:key,
-        data:value["data"],
-        complete:value["complete"]
+    if(typeof key =='number'){
+        const task={
+            id:key,
+            data:value["data"],
+            complete:value["complete"]
+        }
+        addToPage([task])
     }
-    addToPage([task])
+    
+    
 })
 
 
